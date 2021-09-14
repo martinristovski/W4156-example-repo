@@ -32,6 +32,7 @@ function increase_score(id){
     contentType: "application/json; charset=utf-8",
     data : JSON.stringify(team_id),
     success: function(result){
+      // This is the important bit. -- mr3986
       $('#teams').empty();
       var sb = result.scoreboard;
       sb.sort(function(a, b){return b.score - a.score});
